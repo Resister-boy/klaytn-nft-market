@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
+
+.container .inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container .inner .title {
+  color: #006eff;
+  font-size: 40px;
+  font-family: 'Bungee Shade', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container .inner .main {
+  background-color: #f0f8ff;
+  width: 100%;
+  border-radius: 30px;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.container .inner .main .notation {
+  color: #ccc;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 110px;
+}
+.container .inner .main .notation span{
+  color: #006eff;
+  border-bottom: 2px solid #006eff;
+}
+
+.container .inner .main .item__container {
+  display: flex;
+}
+
+.container .inner .main .item__container .item__list {
+  width: auto;
+  height: 300px;
+  margin: 30px;
+}
+
+.container .inner .main .item__container .item__list .itme__id {
+  text-align: right;
+  padding-right: 5px;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+.container .inner .main .item__container .item__list .item__content {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.container .inner .button {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  color: #006eff;
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 2px solid #006eff;
+  border-radius: 15px;
+  transition: all .3s;
+}
+
+.container .inner .button:hover {
+  cursor: pointer;
+  background-color: #006eff;
+  color: #fff;
+}

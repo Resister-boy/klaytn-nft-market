@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
+
+.container .inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container .inner .title {
+  color: #006eff;
+  font-size: 40px;
+  font-family: 'Bungee Shade', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}

@@ -27,7 +27,9 @@ export const setCount = (count, setQrValue) => {
         .then((response) => {
           if(response.data.result) {
             console.log(response.data.result);
-            clearInterval(timerId)
+            if(response.data.result.status === "success") {
+              clearInterval(timerId)
+            }
           }
         })
         .catch((error) => {
@@ -37,7 +39,7 @@ export const setCount = (count, setQrValue) => {
   })
 }
 
-export const getAddress = (setQrValue) => {
+export const getAddress = (setQrValue, callback) => {
   axios.post(A2P_API_PREPARE, {
     bapp: {
       name: A2P_NAME
@@ -53,6 +55,7 @@ export const getAddress = (setQrValue) => {
         .then((response) => {
           if(response.data.result) {
             console.log(response.data.result);
+            callback(response.data.result.klaytn_address);
             clearInterval(timerId)
           }
         })

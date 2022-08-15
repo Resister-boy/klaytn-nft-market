@@ -1,0 +1,14 @@
+.container {
+  width: auto;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .title {
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Bungee Shade', Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 2px;
+}

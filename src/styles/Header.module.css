@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Bungee Shade';
+  src: url('../assets/bungee-shade/BungeeShade-Regular.ttf') format('truetype');
+}
+
+.container {
+  width: 100%;
+  height: 70px;
+  background-color: #006eff;
+}
+
+.container .inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+}
+
