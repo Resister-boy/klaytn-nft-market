@@ -12,3 +12,7 @@
   font-weight: 600;
   letter-spacing: 2px;
 }
+
+.container .title:hover {
+  cursor: pointer;
+}
