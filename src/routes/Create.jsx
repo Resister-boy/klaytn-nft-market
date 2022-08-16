@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import MintNFT from '../components/MintNFT';
 
 function Create() {
   return (
-    <div>Create</div>
+    <div>
+      <MintNFT />
+    </div>
   )
 }
 
