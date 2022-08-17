@@ -15,13 +15,13 @@ function App() {
   return (
     <BrowserRouter className='App'>
       <Header />
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/market" element={ <Market /> } />
-        <Route path="/create" element={ <Create /> } />
-        <Route path="/about" element={ <About /> } />
-        <Route path="*" element={ <NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/market" element={ <Market /> } />
+          <Route path="/create" element={ <Create /> } />
+          <Route path="/about" element={ <About /> } />
+          <Route path="*" element={ <NotFound />} />
+        </Routes>
       <Footer />
     </BrowserRouter>
   );

@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as KlipAPI  from '../api/UseKlip';
 import * as Caver from '../api/UseCaver';
 import styles from "../styles/UserInfo.module.css";
+import store from '../redux/store';
+import { setAddress, setQrCode } from '../redux/actions';
+
 
 // Bootstrap
 
@@ -11,6 +14,7 @@ function UserInfo() {
   const DEFAULT_BALANCE = "0";
   const DEFAULT_ADDRESS = "DEFAULT";
   const QR_DEFAULT = 'DEFAULT';
+
   const [myBalance, setMyBalance] = useState(DEFAULT_BALANCE);
   const [myAddress, setMyAddress] = useState(DEFAULT_ADDRESS);
   const [qrValue, setQrValue] = useState(QR_DEFAULT);
@@ -20,10 +24,14 @@ function UserInfo() {
     KlipAPI.getAddress(setQrValue, async (address) => {
       setMyAddress(address);
       const _balance = await Caver.getBalance(address);
-      console.log(_balance)
+      console.log(_balance);
       setMyBalance(_balance);
     })
+    store.dispatch(setAddress(myAddress));
+    store.dispatch(setQrCode(qrValue))
+    console.log(store.getState());
   }
+
   return (
     <div className={styles.container}>
       <div className={styles.inner}>
