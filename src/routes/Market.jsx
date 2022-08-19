@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import MarketPlace from '../components/MarketPlace';
 
 function Market() {
   return (
-    <div>Market</div>
+    <div>
+      <MarketPlace />
+    </div>
   )
 }
 

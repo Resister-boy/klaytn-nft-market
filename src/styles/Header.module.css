@@ -33,19 +33,14 @@
 .container .inner .nav_container .nav_item {
   display: block;
   text-decoration: none;
+  padding: 5px 15px 3px;
   color: #fff;
   font-size: 18px;
+  transition: all .3s;
 }
 
-.container .inner .nav_container .nav_item::after {
-  display: block;
-  content: '';
-  border-bottom: solid 2px #fff;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in;
-}
-
-.container .inner .nav_container .nav_item:hover::after  {
-  cursor: pointer;
-  transform: scaleX(1);
+.container .inner .nav_container .nav_item:hover {
+  background-color: #65a8ff;
+  padding: 5px 15px 3px;
+  border-radius: 5px;
 }

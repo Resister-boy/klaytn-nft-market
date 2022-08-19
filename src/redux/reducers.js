@@ -6,16 +6,16 @@ const initialQrCode = 'DEFAULT_QRCODE';
 
 const addressReducer = (currentState = initialAddress, action) => {
   if(action.type === SET_ADDRESS) {
-    return { value: action.address}
+    return action.address
   }
-  return { value: currentState };
+  return currentState;
 }
 
 const qrCodeReducer = (currentState = initialQrCode, action) => {
   if(action.type === SET_QRCODE) {
-    return { value: action.qrCode }
+    return action.qrCode
   }
-  return { value: currentState };
+  return currentState;
 }
 
 const reducer =  combineReducers({

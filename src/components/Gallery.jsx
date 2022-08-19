@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { fetchCardsOf } from '../api/UseCaver'
+import { fetchCardsOf } from '../api/UseCaver';
+import * as KlipAPI from '../api/UseKlip';
+import store from '../redux/store';
 import styles from '../styles/Gallery.module.css';
 
 function Gallery() {
@@ -9,9 +11,20 @@ function Gallery() {
   // tokenOfOwnerByIndex => 내가 가진 NFT ID 반환
   // tokenURI => NFT ID를 가지고 token URI 반환
 
-  const fetchNFTs = async () => {
-    const _nfts = await fetchCardsOf("0x329a9542749170eC7d0D1Bcf08E81ABF85332eB5");
-    setNfts(_nfts)
+  // const onClickCard = (tokenId) => {
+  //   KlipAPI.sellCard(myAddress, tokenId, (result) => {
+  //     alert(JSON.stringify(result))
+  //   }) 
+  // }
+
+  const fetchNFTs = async () => { 
+    console.log(store.getState().address)
+    if(store.getState().address !== 'DEFAULT_ADDRESS') {
+      const _nfts = await fetchCardsOf(store.getState().address);
+      setNfts(_nfts)
+    } else {
+      alert('NO ADDRESS')
+    }
   }
   return (
     <div className={styles.container}>

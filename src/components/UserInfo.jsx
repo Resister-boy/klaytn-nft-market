@@ -19,16 +19,16 @@ function UserInfo() {
   const [myAddress, setMyAddress] = useState(DEFAULT_ADDRESS);
   const [qrValue, setQrValue] = useState(QR_DEFAULT);
 
-
   const onClickGetAddress = () => {
     KlipAPI.getAddress(setQrValue, async (address) => {
       setMyAddress(address);
       const _balance = await Caver.getBalance(address);
       console.log(_balance);
       setMyBalance(_balance);
-    })
+    });
+    
     store.dispatch(setAddress(myAddress));
-    store.dispatch(setQrCode(qrValue))
+    store.dispatch(setQrCode(qrValue));
     console.log(store.getState());
   }
 
